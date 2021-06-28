@@ -8,9 +8,11 @@ const msg2 = document.querySelector('#message2')
 const msg3 = document.querySelector('#message3')
 const msg4 = document.querySelector('#message4')
 const msg5 = document.querySelector('#message5')
+const msg6 = document.querySelector('#message6')
+const msg7 = document.querySelector('#message7')
 
 formData.addEventListener('submit',(e)=>{
-      e.preventDefault()
+      e.preventDefault() // to not refresh the browser automatically
       // console.log("Form data Submitted")
 
       msg1.textContent = 'Loading...'
@@ -18,6 +20,8 @@ formData.addEventListener('submit',(e)=>{
       msg3.textContent = ''
       msg4.textContent = ''
       msg5.textContent = ''
+      msg6.textContent = ''
+      msg7.textContent = ''
 
       const location = search.value
       console.log(location)
@@ -32,7 +36,9 @@ formData.addEventListener('submit',(e)=>{
             msg2.textContent=data.place 
             msg3.textContent="Today's Weather: "+data.weather
             msg4.textContent="Current Temperature: "+data.current_temperature+"°C"
-            msg5.textContent="Apparent Temperatur: "+data.apparent_temperature+"°C"
+            msg5.textContent="Apparent Temperature: "+data.apparent_temperature+"°C"
+            msg6.textContent="Current Time: "+data.time+" (UTC)"
+            msg7.textContent="Humidity: "+data.humidity+"%"
 
             // console.log(data.place)            
             // console.log(data.current_temperature)

@@ -33,7 +33,7 @@ app.get('',(req,res) => {
 
 app.get('/about',(req,res) => {
       res.render('about',{
-            title: 'About Me',
+            title: 'About',
             name: 'Aayush Prakash Budania'
       })
 })
@@ -79,7 +79,9 @@ app.get('/weather',(req,res) => {
                         place,
                         current_temperature:data2.curr_temp,
                         apparent_temperature:data2.ap_temp,
-                        weather:data2.weather
+                        weather:data2.weather,
+                        time: data2.time,
+                        humidity: data2.humidity
                   })
                   // console.log("current temperature: "+data.curr_temp);
                   // console.log("Apparent temperature: "+data.ap_temp);
